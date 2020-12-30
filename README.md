@@ -46,7 +46,7 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 
 <h4>Commande pour run le client MySQL qui se connecte au serveur :</h4>
 
-> kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+> kubectl run -it --rm --image=mysql:5.6 --namespace=jenkins --restart=Never mysql-client -- mysql -h mysql -ppassword
 
 
 <h3>PhpMyAdmin :</h3>
