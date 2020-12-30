@@ -27,6 +27,5 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: mypvc
-
+          claimName: jenkins-pvc
       
