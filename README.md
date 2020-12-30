@@ -52,6 +52,7 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 <h3>PhpMyAdmin :</h3>
 
 > kubectl apply -f phpMyAdmin-deployment.yaml --namespace jenkins
+> kubectl apply -f phpMyAdmin-service.yaml --namespace jenkins
 
 
 <h3>Pour supprimier nos services :</h3>
