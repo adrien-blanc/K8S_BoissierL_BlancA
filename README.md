@@ -11,8 +11,9 @@ kubectl create -f jenkins-deployment.yaml --namespace jenkins
 kubectl create -f jenkins-service.yaml --namespace jenkins
 
 kubectl get pods -n jenkins # On récupère le nom de notre container
+
 kubectl logs <nom_container> -n jenkins # On récupère le mot de passe
 
-minikube service jenkins -n jenkins # On créer letunnel minikube
+minikube service jenkins -n jenkins # On créer le tunnel minikube
 
 minikube dashboard
