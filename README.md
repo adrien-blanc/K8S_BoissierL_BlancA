@@ -7,6 +7,7 @@ admin / admin
 minikube start
 
 kubectl create namespace jenkins<br/>
+kubectl apply -f volume/jenkins-pv.yaml<br/>
 kubectl create -f jenkins-deployment.yaml --namespace jenkins<br/>
 kubectl create -f jenkins-service.yaml --namespace jenkins
 
