@@ -30,6 +30,7 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 
 > kubectl apply -f volume/mysql-pv.yaml<br/>
 > kubectl create -f mysql-deployment.yaml --namespace jenkins<br/>
+> kubectl create -f mysql-service.yaml --namespace jenkins
 
 <h4>Voir les informations de deployment :</h4>
 
