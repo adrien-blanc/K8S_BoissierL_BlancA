@@ -31,5 +31,5 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 
 ##Pour supprimier nos services :
 
-kubectl get service -n jenkins<br/>
-kubectl delete service -n jenkins <nom_service>
+> kubectl get service -n jenkins<br/>
+> kubectl delete service -n jenkins <nom_service>
