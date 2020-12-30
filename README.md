@@ -13,7 +13,7 @@ admin / admin
 <h3>Jenkins :</h3>
 
 > kubectl create namespace jenkins<br/>
-> kubectl apply -f volume/jenkins-pv.yaml --namespace jenkins<br/>
+> kubectl apply -f volume/jenkins-pv.yaml<br/>
 > kubectl create -f jenkins-deployment.yaml --namespace jenkins<br/>
 > kubectl create -f jenkins-service.yaml --namespace jenkins
 
@@ -25,9 +25,25 @@ admin / admin
 
 Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : **http://127.0.0.1:<port>**.
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré 
-
-##On accède au dashboard de minikube :
+  
+<h4>On accède au dashboard de minikube :</h4>
 minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
+
+<h3>MySQL :</h3>
+> kubectl apply -f volume/mysql-pv.yaml<br/>
+> kubectl create -f mysql-deployment.yaml --namespace jenkins<br/>
+
+<h4>Voir les informations de deployment :</h4>
+> kubectl describe deployment mysql
+
+<h4>Voir le pod :</h4>
+> kubectl get pods -l app=mysql
+
+<h4>Inspecter le volume :</h4>
+> kubectl describe pvc mysql-pv-claim
+
+<h4>Commande pour run le client MySQL qui se connecte au serveur :</h4>
+> kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
 
 
 <h3>Pour supprimier nos services :</h3>
