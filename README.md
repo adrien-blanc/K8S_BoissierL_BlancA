@@ -3,13 +3,14 @@ cb807df706e7421bb4c582704fe5cac7
 http://127.0.0.1:65087/
 admin / admin
 
-#Procédure pour la mise en place :
+<h2>Procédure pour la mise en place :</h2>
 
-##Démarrage de minikube :
+<h3>Démarrage de minikube :</h3>
+                               
 
 > minikube start
 
-##Jenkins :
+<h3>Jenkins :</h3>
 
 > kubectl create namespace jenkins<br/>
 > kubectl apply -f volume/jenkins-pv.yaml --namespace jenkins<br/>
@@ -29,7 +30,7 @@ Une fois sur la page, on nous demande le mot de passe administrateur. C'est celu
 minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
 
 
-##Pour supprimier nos services :
+<h3>Pour supprimier nos services :</h3>
 
 > kubectl get service -n jenkins<br/>
 > kubectl delete service -n jenkins <nom_service>
