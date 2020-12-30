@@ -16,3 +16,8 @@ minikube service jenkins -n jenkins # On créer le tunnel minikube
 
 
 minikube dashboard
+
+DELETE SERVICES
+
+kubectl get service -n jenkins
+kubectl delete service -n jenkins <nom_service>
