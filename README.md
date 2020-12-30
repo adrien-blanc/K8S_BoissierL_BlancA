@@ -23,7 +23,7 @@ admin / admin
 > kubectl logs <nom_container> -n jenkins # On récupère le mot de passe administrateur.<br/>
 > minikube service jenkins -n jenkins # On créer le tunnel minikube
 
-Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : **http://127.0.0.1:<port>**.
+Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : ** http://127.0.0.1:<port> **.<br>
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré 
   
 <h4>On accède au dashboard de minikube :</h4>
