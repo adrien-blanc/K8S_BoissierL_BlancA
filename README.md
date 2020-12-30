@@ -49,6 +49,11 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 > kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
 
 
+<h3>PhpMyAdmin :</h3>
+
+> kubectl apply -f phpMyAdmin-deployment.yaml --namespace jenkins
+
+
 <h3>Pour supprimier nos services :</h3>
 
 > kubectl get service -n jenkins<br/>
