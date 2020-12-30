@@ -10,9 +10,9 @@ kubectl create namespace jenkins<br/>
 kubectl create -f jenkins-deployment.yaml --namespace jenkins<br/>
 kubectl create -f jenkins-service.yaml --namespace jenkins
 
-------------
+---
 Attendre que le container soit lancé (Environ 90 secondes)
-------------
+---
 
 kubectl get pods -n jenkins # On récupère le nom de notre container<br/>
 kubectl logs <nom_container> -n jenkins # On récupère le mot de passe<br/>
