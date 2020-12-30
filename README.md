@@ -30,6 +30,7 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 
 > kubectl apply -f volume/mysql-pv.yaml<br/>
 > kubectl create -f mysql-deployment.yaml --namespace jenkins<br/>
+> kubectl create -f mysql-service.yaml --namespace jenkins
 
 <h4>Voir les informations de deployment :</h4>
 
@@ -46,6 +47,14 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 <h4>Commande pour run le client MySQL qui se connecte au serveur :</h4>
 
 > kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+
+
+<h3>PhpMyAdmin :</h3>
+
+> kubectl apply -f phpMyAdmin-deployment.yaml --namespace jenkins<br>
+> kubectl apply -f phpMyAdmin-service.yaml --namespace jenkins<br>
+> kubectl apply -f ingress.yml --namespace jenkins
+> minikube service phpmyadmin-service -n jenkins
 
 
 <h3>Pour supprimier nos services :</h3>
