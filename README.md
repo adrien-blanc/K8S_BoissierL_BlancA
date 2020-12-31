@@ -50,7 +50,8 @@ Attendre que les plugins s'installent ...
 
   
 <h4>On accède au dashboard de minikube :</h4>
-minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
+
+> minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
 
 <h3>MySQL :</h3>
 
