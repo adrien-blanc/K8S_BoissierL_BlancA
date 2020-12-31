@@ -2,9 +2,15 @@
 
 <h2>Procédure pour la mise en place :</h2>
 
-<h3>Démarrage de minikube :</h3>
+<h4>Démarrage de minikube :</h4>
                                
 > minikube start
+
+<h4>On accède au dashboard de minikube :</h4>
+
+> minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
+
+---
 
 <h3>Jenkins :</h3>
 
@@ -47,11 +53,6 @@ Une fois sur la page, on nous demande le mot de passe administrateur. C'est celu
 <h4>Configuration :</h4>
 Une fois que vous avez rentré le mot de passe administrateur, vous aurez deux choix. Nous vous conseillons de choisir le premier choix "Installation par défaut".<br/>
 Attendre que les plugins s'installent ...
-
-  
-<h4>On accède au dashboard de minikube :</h4>
-
-> minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
 
 ---
 
