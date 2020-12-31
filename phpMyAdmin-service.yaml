@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: phpmyadmin-service
+  name: phpmyadmin
 spec:
   type: NodePort
   selector:
