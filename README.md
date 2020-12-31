@@ -9,11 +9,16 @@
 <h3>Jenkins :</h3>
 
 <h4>Installation :</h4>
-On créer notre namespace :<br/>
-> kubectl create namespace jenkins<br/>
-On créer notre volume :<br/>
-> kubectl apply -f volume/jenkins-pv.yaml<br/>
-On créer notre déploiement et notre service : <br/>
+On créer notre namespace :
+
+> kubectl create namespace jenkins
+
+On créer notre volume :
+
+> kubectl apply -f volume/jenkins-pv.yaml
+
+On créer notre déploiement et notre service : 
+
 > kubectl create -f jenkins-deployment.yaml --namespace jenkins<br/>
 > kubectl create -f jenkins-service.yaml --namespace jenkins
 
@@ -21,15 +26,21 @@ On créer notre déploiement et notre service : <br/>
 
 
 <h4>Mot de passe :</h4>
-On récupère le nom de notre container :<br/>
-> kubectl get pods -n jenkins<br/>
-On récupère le mot de passe administrateur :<br/>
-> kubectl logs <nom_container> -n jenkins<br/>
+On récupère le nom de notre container :
+
+> kubectl get pods -n jenkins
+
+On récupère le mot de passe administrateur :
+
+> kubectl logs <nom_container> -n jenkins
+
 Vous devriez le trouver entre plusieurs lignes d'étoiles. Garder-le, on en aura besoin pour se connecter à Jenkins.<br/>
 
 <h4>Accès :</h4>
-On créer notre tunnel pour accéder à Jenkins :<br/>
-> minikube service jenkins -n jenkins<br/>
+On créer notre tunnel pour accéder à Jenkins :
+
+> minikube service jenkins -n jenkins
+
 Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : **http://127.0.0.1:<port\>**.<br/>
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré.
 
@@ -44,25 +55,32 @@ minikube dashboard # Cela nous permettra d'observer plus simplement nos containe
 <h3>MySQL :</h3>
 
 <h4>Installation :</h4>
-On créer notre volume :<br/>
-> kubectl apply -f volume/mysql-pv.yaml<br/>
-On créer notre déploiement et nos services :<br/>
+On créer notre volume :
+
+> kubectl apply -f volume/mysql-pv.yaml
+
+On créer notre déploiement et nos services :
+
 > kubectl create -f mysql-deployment.yaml --namespace jenkins<br/>
 > kubectl create -f mysql-service.yaml --namespace jenkins
 
 <h4>Commande pour se connecter directement à MySQL : (Facultatif)</h4>
+
 > kubectl run -it --rm --image=mysql:5.6 --namespace=jenkins --restart=Never mysql-client -- mysql -h mysql -ppassword
 
 <h3>PhpMyAdmin :</h3>
 
 <h4>Installation :</h4>
-On créer notre déploiement et nos services :<br/>
+On créer notre déploiement et nos services :
+
 > kubectl apply -f phpMyAdmin-deployment.yaml --namespace jenkins<br>
-> kubectl apply -f phpMyAdmin-service.yaml --namespace jenkins<br>
+> kubectl apply -f phpMyAdmin-service.yaml --namespace jenkins
 
 <h4>Accès :</h4>
-On créer le tunnel nécessaire pour accéder à phpMyAdmin :<br/>
+On créer le tunnel nécessaire pour accéder à phpMyAdmin :
+
 > minikube service phpmyadmin-service -n jenkins
+
 Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **root** / **password**
 
 
