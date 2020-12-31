@@ -53,6 +53,8 @@ Attendre que les plugins s'installent ...
 
 > minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
 
+---
+
 <h3>MySQL :</h3>
 
 <h4>Installation :</h4>
@@ -69,6 +71,8 @@ On créer notre déploiement et nos services :
 
 > kubectl run -it --rm --image=mysql:5.6 --namespace=jenkins --restart=Never mysql-client -- mysql -h mysql -ppassword
 
+---
+
 <h3>PhpMyAdmin :</h3>
 
 <h4>Installation :</h4>
@@ -84,6 +88,7 @@ On créer le tunnel nécessaire pour accéder à phpMyAdmin :
 
 Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **root** / **password**
 
+---
 
 <h3>Pour supprimer nos services :</h3>
 
