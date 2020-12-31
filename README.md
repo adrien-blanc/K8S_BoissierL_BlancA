@@ -46,7 +46,7 @@ Une fois sur la page, on nous demande le mot de passe administrateur. C'est celu
 
 <h4>Configuration :</h4>
 Une fois que vous avez rentré le mot de passe administrateur, vous aurez deux choix. Nous vous conseillons de choisir le premier choix "Installation par défaut".<br/>
-Attendre que les plugins s'installe ...
+Attendre que les plugins s'installent ...
 
   
 <h4>On accède au dashboard de minikube :</h4>
