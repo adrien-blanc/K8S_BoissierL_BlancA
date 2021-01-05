@@ -110,6 +110,20 @@ Dans le menu de gauche, cliquer sur l'onglet **"Manage Jenkins"**, puis cliquer 
 Cliquer sur l'onglet "**Available**".<br>
 Dans la barre de recherche taper : **"Mysql"** et installer le package MySQL Database et **redémarrer** jenkins (**"Download now and install after restart"**)
 
+<h4>Connexion à la BDD :</h4>
+
+On retourne dans "**Manage Jenkins**" > "**Configure System**"<br>
+Se rendre tout en bas de la page dans l'onglet : "**Global Database**" et sélectionner **MySQL**.<br> 
+
+Rentrer ces informations :
+- Host Name : mysql
+- Database : mysql
+- Username : root
+- Password : password
+- Validation Query : SELECT 1
+
+Vous pouvez vérifier la connectivité en appuyant sur le bouton "**Test Connection**", un **OK** devrait apparaître.
+
 ---
 
 <h3>Pour supprimer nos services :</h3>
