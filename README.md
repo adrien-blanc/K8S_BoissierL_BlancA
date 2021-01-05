@@ -62,6 +62,9 @@ Remplir les informations comme-ci :
 - Full name : admin
 - E-mail address : admin@gmail.com
 
+On arrive enssuite sur la page : "Instance Configuration", on ne va pas changer l'url qui nous est proposé, je vous invites donc à cliquer sur "Save and Finish", puis "Start using Jenkins". <br/>
+Et voilà, on a désormais accès à tout Jenkins. On y reviendra plus tard dans le README.
+
 ---
 
 <h3>MySQL :</h3>
