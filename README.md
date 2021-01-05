@@ -102,6 +102,15 @@ Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **r
 
 ---
 
+<h3>Configuration d'une tâche Jenkins :</h3>
+
+<h4>Installation du plugin :</h4>
+Dans le menu de gauche, cliquer sur l'onglet "**Manage Jenkins**", puis cliquer sur "**Manage Plugins**".<br>
+Cliquer sur l'onglet "**Available**".<br>
+Dans la barre de recherche taper : "**Mysql**" et installer le package MySQL Database et **redémarrer** jenkins ("**Download now and install after restart**")
+
+---
+
 <h3>Pour supprimer nos services :</h3>
 
 > kubectl get service -n jenkins<br/>
