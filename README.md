@@ -96,7 +96,7 @@ On créer notre déploiement et nos services :
 <h4>Accès :</h4>
 On créer le tunnel nécessaire pour accéder à phpMyAdmin :
 
-> minikube service phpmyadmin-service -n jenkins
+> minikube service phpmyadmin -n jenkins
 
 Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **root** / **password**
 
