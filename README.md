@@ -51,8 +51,16 @@ Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembl
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré.
 
 <h4>Configuration :</h4>
-Une fois que vous avez rentré le mot de passe administrateur, vous aurez deux choix. Nous vous conseillons de choisir le premier choix "Installation par défaut".<br/>
-Attendre que les plugins s'installent ...
+Une fois que vous avez rentré le mot de passe administrateur, vous aurez deux choix. Nous vous conseillons de choisir le premier choix "Install suggested plugins".<br/>
+Attendre que les plugins s'installent (environ 4-5 minutes) ...
+
+Après l'installation on va pouvoir créer un utilisateur admin pour les futurs connection.
+
+Remplir les informations comme-ci :
+- Username : admin
+- Password : admin
+- Full name : admin
+- E-mail address : admin@gmail.com
 
 ---
 
