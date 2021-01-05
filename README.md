@@ -124,6 +124,8 @@ Rentrer ces informations :
 
 Vous pouvez vérifier la connectivité en appuyant sur le bouton "**Test Connection**", un **OK** devrait apparaître.
 
+Cliquer sur **Save**.
+
 ---
 
 <h3>Pour supprimer nos services :</h3>
