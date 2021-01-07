@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: jenkins
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 30000
   selector:
     app: jenkins
 
