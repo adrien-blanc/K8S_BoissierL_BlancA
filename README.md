@@ -163,7 +163,7 @@ Cliquer sur **Save**.
 
 Premierement, aller sur le Dashboard afin de récuperer le Token de notre secret jenkins : 
 
-Onglet Secrets > jenkins-token-xxxx > cliquer dans la partie Données sur "token" et copier le secret dans votre presse papier.
+Onglet Secrets > jenkins-token-xxxx > cliquer dans la partie **Data** sur "token" et copier le secret dans votre presse papier.
  
 On retourne dans "**Manage Jenkins**" puis "**Manage Nodes**" et enfin "**Configure Clouds**"<br> 
 Cliquer sur "**Ajouter un nouveau cloud**" et selectionner **Kubernetes**
