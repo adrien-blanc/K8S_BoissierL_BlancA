@@ -1,6 +1,6 @@
 # K8S_BoissierL_BlancA
 
-<h1>Introduction<h1>
+<h1>Introduction</h1>
 
 Avant de rentrer dans le vive du sujet, voici une courte présentation de notre projet :
 
