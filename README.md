@@ -139,7 +139,10 @@ Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **r
 Dans le menu de gauche, cliquer sur l'onglet **"Manage Jenkins"**, puis cliquer sur **"Manage Plugins"**.<br>
 Cliquer sur l'onglet "**Available**".<br>
 Dans la barre de recherche taper : **"Mysql"** et cocher **MySQL Database**.
-Faite de même pour le plugin **"Kubernetes"**. Installer les packages et **redémarrer** Jenkins (**"Download now and install after restart"**) (Attention, parfois le restart ne ce fait pas bien, si vous voyez que tout a été installé et que rien ne se passe, cocher la case **Restart Jenkins** en bas de la page.) Ps : n'oubliez pas que pour vous reconnecter à jenkins vos login sont **admin / admin**.
+Faite de même pour le plugin **"Kubernetes"**. Installer les packages et **redémarrer** Jenkins (**"Download now and install after restart"**)
+
+(Attention, parfois le restart ne ce fait pas bien, si vous voyez que tout a été installé et que rien ne se passe, cocher la case **Restart Jenkins** en bas de la page.)<br>
+Ps : n'oubliez pas que pour vous reconnecter à jenkins vos login sont **admin / admin**.
 
 <h3>Configuration du plugin MySQL (test de connexion à notre BDD) :</h3>
 
@@ -195,7 +198,7 @@ Pour trouver les deux IPs suivantes, rendez-vous sur le **Dashboard** dans l'ong
 Cliquer sur Apply, puis Save.
 
 <h3>Configuration du job jenkins :</h3>
-Dernière étape ! Sur le menu principal, aller sur **New Item** > nommer votre job > Pipeline > OK > Onglet Pipeline <br>
+Dernière étape ! Sur le menu principal, aller sur New Item > nommer votre job (Exemple : jobBDD) > Pipeline > OK > Onglet Pipeline <br>
 
 Dans la zone de texte, coller le contenu du script **job_pipeline.groovy** se trouvant sur le repository Github.<br>
 Apply puis Save.
