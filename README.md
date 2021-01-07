@@ -29,6 +29,8 @@ Dans notre cas, nous avons installé le plugin Kubernetes pour que le serveur Je
 
 > minikube dashboard # Cela nous permettra d'observer plus simplement nos containers.
 
+Il va falloir lancer un nouvel invite de commande et laisser celui-là ouvert.
+
 ---
 
 <h2>Jenkins :</h2>
@@ -70,6 +72,8 @@ Vous devriez le trouver entre plusieurs lignes d'étoiles. Garder-le, on en aura
 On créer notre tunnel pour accéder à Jenkins :
 
 > minikube service jenkins -n jenkins
+
+Il va falloir lancer un nouvel invite de commande et laisser celui-là ouvert.
 
 Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : **http://127.0.0.1:<port\>**.<br/>
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré.
@@ -121,6 +125,8 @@ On créer notre déploiement et nos services :
 On créer le tunnel nécessaire pour accéder à phpMyAdmin :
 
 > minikube service phpmyadmin -n jenkins
+
+Il va falloir lancer un nouvel invite de commande et laisser celui-là ouvert.
 
 Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **root** / **password**
 
