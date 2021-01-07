@@ -50,6 +50,12 @@ On créer notre tunnel pour accéder à Jenkins :
 Un tableau devrait apparaitre, cliquer sur le deuxième URL, il devrait ressembler à ça : **http://127.0.0.1:<port\>**.<br/>
 Une fois sur la page, on nous demande le mot de passe administrateur. C'est celui que l'on a récupéré.
 
+
+> kubectl create serviceaccount jenkins --namespace=jenkins <br/>
+#######<br/> 
+ >kubectl create rolebinding jenkins-admin-binding --clusterrole=admin --serviceaccount=jenkins:jenkins --namespace=jenkins<br/>
+#######
+
 <h4>Configuration :</h4>
 Une fois que vous avez rentré le mot de passe administrateur, vous aurez deux choix. Nous vous conseillons de choisir le premier choix "Install suggested plugins".<br/>
 Attendre que les plugins s'installent (environ 4-5 minutes) ...
@@ -108,9 +114,10 @@ Une fois sur la page, vous pourrez vous connecter avec les logins suivants : **r
 
 Dans le menu de gauche, cliquer sur l'onglet **"Manage Jenkins"**, puis cliquer sur **"Manage Plugins"**.<br>
 Cliquer sur l'onglet "**Available**".<br>
-Dans la barre de recherche taper : **"Mysql"** et installer le package MySQL Database et **redémarrer** jenkins (**"Download now and install after restart"**)
+Dans la barre de recherche taper : **"Mysql"** et cocher le.
+Faite de meme pour le plugin **"Kubernetes"**. Installer les packages et **redémarrer** Jenkins (**"Download now and install after restart"**)
 
-<h4>Connexion à la BDD :</h4>
+<h4>Configuration du plugin MySQL (test de connexion à notre BDD) :</h4>
 
 On retourne dans "**Manage Jenkins**" > "**Configure System**"<br>
 Se rendre tout en bas de la page dans l'onglet : "**Global Database**" et sélectionner **MySQL**.<br> 
@@ -125,6 +132,42 @@ Rentrer ces informations :
 Vous pouvez vérifier la connectivité en appuyant sur le bouton "**Test Connection**", un **OK** devrait apparaître.
 
 Cliquer sur **Save**.
+
+<h4>Configuration du plugin Kubernetes :</h4>
+
+Premierement, aller sur le Dashboard afin de recuperer le Token de notre secret jenkins : 
+
+Onglet Secret > jenkins-token-xxxx > cliquer dans la partie Données sur "token" et copier dans votre presse papier le secret.
+ 
+On retourne dans "**Manage Jenkins**" puis "**Manage Nodes**" et enfin "**Configure CLouds**"<br> 
+Cliquer sur "**Ajouter un nouveau cloud**" et selectionner **Kubernetes**
+Deplier les informations en cliquant sur "**Kurbernetes Cloud Details**" puis completer les champs suivants :
+- Name : kubernetes
+- Kubernetes URL : https://192.168.49.2:8443 (adresse Minikube )
+- Kubernetes Namespace : jenkins
+- Credential : <br>
+    1. Ajouter > Jenkins 
+    2. Type : Secret Text
+    3. Secret : Coller le Token copier precedemment 
+    4. ID : serviceaccount_jenkins
+    5. Ajouter
+    6. Selectionner dans la liste deroulante le Credential nommé serviceaccount_jenkins
+
+On peut des a present tester la connexion en cliquant sur le bouton Test Connection. Le resultat doit etre le suivant : Connected to Kubernetes vx.xx.x
+
+- Jenkins URL : http://IP_frontend:8080
+- Jenkins tunnel : IP_jenkins-jnlp:50000
+- Laisser informations par defaut
+
+Cliquer sur Apply, puis Save.
+
+<h4>Configuration du job jenkins :</h4>
+Derniere etape ! Sur le menu principal, aller sur Nouveau Item > nommer votre job > Pipeline > OK > Onglet Pipeline <br>
+
+Dans la zone de texte, coller le contenu du script **job_pipeline.groovy** se trouvant sur le repository github.<br>
+Apply puis Save.
+
+On peut enfin lancer le job et voir le resultat sur PhpMyAdmin !!
 
 ---
 
