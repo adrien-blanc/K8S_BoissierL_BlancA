@@ -182,7 +182,7 @@ Deplier les informations en cliquant sur "**Kurbernetes Cloud Details**" puis co
     > Secret : Coller le Token copié précédemment <br>
     > ID : serviceaccount_jenkins<br>
     > Ajouter<br>
-    > Selectionner dans la liste deroulante le Credential nommé serviceaccount_jenkins
+    > Selectionner dans la liste déroulante le Credential nommé serviceaccount_jenkins
 
 On peut dès à present tester la connexion en cliquant sur le bouton **"Test Connection"**. Le résultat doit être le suivant : *Connected to Kubernetes vx.xx.x*
 
