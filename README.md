@@ -2,7 +2,7 @@
 
 <h1>Introduction :</h1>
 
-Avant de rentrer dans le vive du sujet, voici une courte présentation de notre projet :
+Avant de rentrer dans le vif du sujet, voici une courte présentation de notre projet :
 
 Scénario (Use Case):
 Lors de la création d'une application à l'aide de l'outil Jenkins, les équipes travaillants sur ce sujet aimeraient savoir si l'application écrit bien dans leur BDD. Afin de répondre à cette interogation, ils leur suffit de lancer un job Jenkins qui réalisera les opérations voulus (test d'écriture dans la base de données). Cette bonne pratique d'automatiser les tâches rentre bien dans les moeurs des dernieres années, qui consiste à se rapprocher le plus possible d'une **infrastructure as code**. <br>
