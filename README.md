@@ -1,6 +1,6 @@
 # K8S_BoissierL_BlancA
 
-<h1>Introduction</h1>
+<h1>Introduction :</h1>
 
 Avant de rentrer dans le vive du sujet, voici une courte présentation de notre projet :
 
@@ -14,7 +14,7 @@ Afin de réaliser cela, nous avons mis en place:
 - un client MySQL (Pod temporaire pour faire des requêtes sur la BDD)
 
 Explication :
-L'ojbectif est d'avoir un job Jenkins qui va écrire dans la base de donnée MySQL. Pour cela il existe des plugins à installer sur Jenkins afin de mettre en lien des services. 
+L'objectif est d'avoir un job Jenkins qui va écrire dans la base de donnée MySQL. Pour cela il existe des plugins à installer sur Jenkins afin de mettre en lien des services. 
 Dans notre cas, nous allons installer le plugin Kubernetes pour que le server Jenkins pilote Minikube. Pour quel usage ? Tout simplement pour instancier (lors d'un job jenkins) un pod client MySQL qui écrirat dans notre BDD (création basique d'une base de données). 
 
 ---
